@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Add a New Car
+        a.nav-link(href="/") Return to the homepage
+        .form-wrapper
+            form(method="POST" action="/update-cobj")
+                label(for="name") Name
+                input(type="text" name="name" id="name" required)
+
+                label(for="model") Model
+                input(type="text" name="model" id="model" required)
+
+                label(for="color") Color
+                input(type="text" name="color" id="color" required)
+
+                input(type="submit" value="Submit")
